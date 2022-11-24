@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Peníze ke mně</title>
+    <link rel="icon" href="logo.png">
+</head>
+<body>
+
+<h1>Máte moc peněz? My ne.</h1>
+<h3>peníze nesmrdí -- Mark Zuckerberg</h3>
+
+Můžete darovat zde.
+
+<div>
+    <input type="text" id="castka">
+    <button id="potvrd" onclick="vyhodnot()">pošli</button>
+    <p id="ohodnoceni"></p>
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+    function vyhodnot() {
+        let value = document.getElementById("castka").value;
+
+        document.getElementById("ohodnoceni").innerHTML = "Darovali jste nám " + value + " Kč, děkujeme.";
+    }
+</script>
+
+</html>
