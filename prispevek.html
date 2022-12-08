@@ -4,11 +4,36 @@
     <meta charset="UTF-8">
     <title>Peníze ke mně</title>
     <link rel="icon" href="logo.png">
+
+    <style>
+        .lista {
+            height: 4%;
+            width: 100%;
+            padding: 0px;
+            display: flex;
+            justify-content: start;
+            background-color: #FAEB93;
+        }
+        .prvek-listy {
+            max-width: 10%;
+            padding-right: 5%;
+        }
+    </style>
+
 </head>
 <body>
 
+<div class="lista">
+    <p class="prvek-listy" style="padding-left:1.5%;">
+        <a href="index.html">Domů</a>
+    </p>
+    <p class="prvek-listy">
+        <a href="program.html">Program</a>
+    </p>
+</div>
+
 <h1>Máte moc peněz? My ne.</h1>
-<h3>peníze nesmrdí -- Mark Zuckerberg</h3>
+<h2>peníze nesmrdí -- Mark Zuckerberg</h2>
 
 Můžete darovat zde.
 
@@ -25,7 +50,27 @@ Můžete darovat zde.
     function vyhodnot() {
         let value = document.getElementById("castka").value;
 
-        document.getElementById("ohodnoceni").innerHTML = "Darovali jste nám " + value + " Kč, děkujeme.";
+        value = parseInt(value);
+        let message;
+
+        if (!isNaN(value)) {
+            if (value < 1) {
+                message = "Haha.";
+            } else if (value < 100) {
+                message = "Není to moc, ale co je malé, to je milé.";
+            } else if (value < 1000) {
+                message = "Děkujeme za darování " + value + " Kč. Protože to není moc peněz, nejspíš je neuvidíte nikde investované.";
+            } else if (value < 5000) {
+                message = "Děkujeme za váš středně štědrý dar.";
+            } else {
+                message = "Darovali jste nám štědrých " + value + " Kč, děkujeme.";
+            }
+        } else {
+            message = "Zadejte prosím platnou hodnotu.";
+        }
+
+        document.getElementById("ohodnoceni").innerHTML = message;
+
     }
 </script>
 
