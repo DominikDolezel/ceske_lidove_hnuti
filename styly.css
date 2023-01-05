@@ -45,3 +45,47 @@ a{
 text-decoration: underline;
 color: #6B024F;
 }
+
+
+#penizky{
+    background-image: url("duchodci.jfif");
+    width: 22%;
+    border: 15px solid yellow;
+    padding: 3% 1.5% 3% 1.5%;
+    margin-left: 39%;
+    margin-top: 20%;
+    transform: rotate(30deg);
+    font-size:200%;
+    text-align:center;
+}
+#predseda{
+    width = 10%;
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+#sipka{
+    padding-left:50%;
+    padding-bottom:20%;
+    transform:rotate(110deg);
+}
+#popis{
+    padding-left:5%;
+    width: 5%;
+    margin-left: 5%;
+    font-size:200%;
+    text-align:center;
+}
+#odkazy{
+    background-color: yellow;
+    width: 40%;
+    padding: 1% 1% 1% 1%;
+    margin-left: 10%;
+    margin-top: 10%;
+    font-size:120%;
+    text-align:center;
+    height:10%;
+}
+#ramec{
+    display: flex;
+    jusitfy-content: start;
+}
